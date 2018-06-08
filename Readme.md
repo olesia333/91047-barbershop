@@ -1,6 +1,7 @@
 # Учебный проект «Барбершоп»
 
 * Студент: [Olesya Panova](https://up.htmlacademy.ru/htmlcss/21/user/91047).
+* Наставник: [Александр Кошара](https://htmlacademy.ru/profile/rednaxxxela).
 
 ---
 
