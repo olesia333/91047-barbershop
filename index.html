@@ -6,7 +6,7 @@
   </head>
   <body>
     <header class="main-header">
-    	<nav>
+    	<nav aria-label="Навигация по сайту">
     		<a href="#" class="main-header-logo">
     			<img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбешопа Бородинский">
     		</a>
@@ -27,9 +27,9 @@
     				<a href="#">Контакты</a>
     			</li>
     		</ul>
-    		<ul class="user-nav">
+    		<ul class="user-nav" aria-label="Пользовательское меню">
     			<li class="login-link">
-    				<a href="#">Вход</a>
+    				<a href="#" class="login-link">Вход</a>
     			</li>
     		</ul>
     	</nav>
@@ -73,8 +73,8 @@
     				<img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
     			</a>
     		</figure>
-    		<span class="btn gallery-btn gallery-btn-back">Назад</span>
-        	<span class="btn gallery-btn gallery-btn-next">Вперед</span>
+    		<button class="btn gallery-btn gallery-btn-back">Назад</button>
+        	<button class="btn gallery-btn gallery-btn-next">Вперед</button>
     	</section>
     	<section class="contacts">
     		<p>
@@ -93,7 +93,25 @@
     	<section class="feedback">
     		<h2>Записаться</h2>
     		<p class="feedback-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-    		<!--TODO Сделать форму-->
+    		<form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+          	  <p class="appointment-item">
+                <label for="appointment-date">Дата</label>
+                <input id="appointment-date" type="text" name="date" value="" placeholder="08.06.2018">
+              </p>
+              <p class="appointment-item">
+                <label for="appointment-time">Время</label>
+                <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+              </p>
+              <p class="appointment-item">
+                <label for="appointment-name">Ваше имя</label>
+                <input id="appointment-name" type="text" name="name" value="" placeholder="Синяя Борода">
+              </p>
+              <p class="appointment-item">
+                <label for="appointment-phone">Телефон</label>
+                <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+              </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>  
     	</section>
     </main>
     <footer class="main-footer">
@@ -119,12 +137,30 @@
     <section class="modal modal-login">
     	<h2>Личный кабинет</h2>
     	<p>Введите свой логин и пароль.</p>
-    	<!--TODO Сделать форму-->
-    	<span class="modal-close">x</span>
+    	<form action="https://echo.htmlacademy.ru" class="login-form" method="post">
+    		<p>
+    			<label for="user-login" class-="visually-hidden">Логин</label>
+    			<input type="text" name="login" id="user-login" class="login-icon-user" placeholder="Логин">
+    		</p>
+    		<p>
+    			<label for="user-password" class="visually-hidden"></label>
+    			<input type="password"  id="user-password" name="password" class="login-icon-password" placeholder="Пароль">
+    		</p>
+    		<p>
+    			<label class="login-checkbox">
+    			  <input type="checkbox" name="remember" class="visually-hidden">
+    			  <span class="checkbox-indicator"></span>
+    			</label>
+    		</p>
+    	</form>
+    	<button class="modal-close" type="button">Закрыть</button>
     </section>
     <section class="modal modal-map">
     	<h2 class="visually-hidden">Как до нас добраться?</h2>
-    	<span class="modal-close">x</span>
+        <p>
+          <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </p>
+    	<button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
