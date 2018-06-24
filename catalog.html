@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп "Бородинский" каталог товаров</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
-    	<nav aria-label="Навигация по сайту">
+    	<nav class="main-navigation" aria-label="Навигация по сайту">
     		<a href="#" class="main-header-logo">
     			<img src="img/logo.svg" width="111" height="24" alt="Логотип барбешопа Бородинский">
     		</a>
@@ -35,7 +38,7 @@
     	</nav>
     </header>
     <main class="container">
-        <h1>Средства для ухода</h1>
+        <h1 class="page-title">Средства для ухода</h1>
         <ul class="breadcrumbs">
             <li><a href="index.html">Главная</a></li>
             <li><a href="catalog.html">Магазин</a></li>
@@ -44,36 +47,36 @@
         <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-               <fieldsrt>
+               <fieldset>
                    <legend>Производители:</legend>
                    <ul>
-                       <li class="filter-opinion">
-                        <input type="checkbox" id="baxter-of-california" class="visual-hidden filter-input filter-input-checkbox" name="baxter-of-california" checked>
-                       <label for="filter-baxter-of-california">Baxter of California</label>
+                       <li class="filter-option">
+                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="baxter-of-california" id="filter-baxter-of-california" checked>
+                        <label for="filter-baxter-of-california">Baxter of California</label>
                        </li>
-                       <li class="filter-opinion">
-                        <input type="checkbox" class="visual-hidden filter-input filter-input-checkbox" name="mr-natty" id="mr-natty">
+                       <li class="filter-option">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="mr-natty" id="mr-natty"  disabled="">
                        <label for="mr-natty">Mr Natty</label>
                        </li>
-                       <li class="filter-opinion">
-                        <input type="checkbox" class="visual-hidden filter-input filter-input-checkbox" name="suavecito" id="suavecito" checked>
+                       <li class="filter-option">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="suavecito" id="suavecito" checked>
                        <label for="suavecito">Suavecito </label>
                        </li>
                        <li>
-                        <input type="checkbox" class="visual-hidden filter-input filter-input-checkbox" name="malin-goetz" id="malin-goetz">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="malin-goetz" id="malin-goetz">
                        <label for="malin-goetz">Malin+Goetz</label>
                        </li>
-                       <li class="filter-opinion">
-                        <input type="checkbox" class="visual-hidden filter-input filter-input-checkbox" name="murrays" id="murrays">
+                       <li class="filter-option">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox"" name="murrays" id="murrays">
                        <label for="murrays">Murray's</label>
                        </li>
-                       <li class="filter-opinion">
-                        <input type="checkbox" class="visual-hidden filter-input filter-input-checkbox" name="american-crew" id="american-crew" checked>
+                       <li class="filter-option">
+                        <input type="checkbox" class="visually-hidden filter-input filter-input-checkbox" name="american-crew" id="american-crew" checked>
                        <label for="american-crew">American Crew</label>
                        </li>
                    </ul>
-               </fieldsrt>
-               <fieldsrt>
+               </fieldset>
+               <fieldset>
                    <legend>Группы товаров:</legend>
                    <ul>
                        <li class="filter-opinion">
@@ -89,8 +92,8 @@
                         <label for="accessories">Аксессуары</label>
                        </li>
                    </ul>
-               </fieldsrt>
-               <button type="submit" class="filter-button button">Показать</button>
+               </fieldset>
+               <button type="submit" class="filter-button btn">Показать</button>
             </form>
             
         </section>
@@ -226,23 +229,19 @@
                 <input type="text" name="login" id="user-login" class="login-icon-user" placeholder="Логин">
             </p>
             <p>
-                <label for="user-password" class="visually-hidden"></label>
+                <label for="user-password" class="visually-hidden">Пароль</label>
                 <input type="password"  id="user-password" name="password" class="login-icon-password" placeholder="Пароль">
             </p>
             <p>
                 <label class="login-checkbox">
                   <input type="checkbox" name="remember" class="visually-hidden">
                   <span class="checkbox-indicator"></span>
+                  Запомните меня
                 </label>
+                <a class="restore" href="#">Я забыл пароль!</a>
             </p>
+            <button class="btn" type="submit">Войти</button>
         </form>
-        <button class="modal-close" type="button">Закрыть</button>
-    </section>
-    <section class="modal modal-map">
-        <h2 class="visually-hidden">Как до нас добраться?</h2>
-        <p>
-          <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        </p>
         <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
